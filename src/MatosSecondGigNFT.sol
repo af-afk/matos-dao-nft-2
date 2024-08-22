@@ -22,4 +22,8 @@ contract MyToken is Initializable, ERC721Upgradeable, ERC721BurnableUpgradeable,
     function safeMint(address to, uint256 tokenId) public onlyOwner {
         _safeMint(to, tokenId);
     }
+
+    function tokenURI(uint256 /* _tokenId */) public override pure returns (string memory) {
+        return "";
+    }
 }
